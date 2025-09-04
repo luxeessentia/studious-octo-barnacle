@@ -1,7 +1,6 @@
 import PromoBar from './PromoBar';
 import Header from './Header';
 import Footer from './Footer';
-import '../styles/globals.css';
 
 export default function Layout({ children }) {
   return (
