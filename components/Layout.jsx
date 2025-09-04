@@ -9,4 +9,9 @@ export default function Layout({ children }) {
       <PromoBar />
       <Header />
       <main className="container" style={{ paddingTop: 16, paddingBottom: 160 }}>
-        {children
+        {children}
+      </main>
+      <Footer />
+    </>
+  );
+}
