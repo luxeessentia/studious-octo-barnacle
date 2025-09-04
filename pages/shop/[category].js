@@ -1,5 +1,5 @@
-﻿import Layout from '../../../components/Layout';
-import ProductCard from '../../../components/ProductCard';
+﻿import Layout from '../../components/Layout';
+import ProductCard from '../../components/ProductCard';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
