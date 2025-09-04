@@ -18,8 +18,9 @@ export default async function handler(req, res) {
     for(const it of items) {
       const p = map[it.id];
       if(!p) return res.status(400).json({ error: 'Invalid product: ' + it.id });
-      if(typeof p.stock === 'number' && p.stock < (it.quantity || 1)) return res.status(400).json({ error: Insufficient stock for  });
-    }
+      if (typeof p.stock === 'number' && p.stock < (it.quantity || 1)) {
+  return res.status(400).json({ error: `Insufficient stock for ${it.id}` });
+}
 
     const line_items = items.map(it => {
       const p = map[it.id];
