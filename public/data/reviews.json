@@ -1,0 +1,57 @@
+﻿[
+    {
+        "id":  "rev_1",
+        "name":  "John G.",
+        "text":  "Very pleased with the item. Packaged extremely well and in excellent condition.",
+        "approved":  true,
+        "rating":  5,
+        "tags":  [
+                     "communication",
+                     "friendly",
+                     "great packaging",
+                     "item description",
+                     "quick shipper"
+                 ]
+    },
+    {
+        "id":  "rev_2",
+        "name":  "Melissa M.",
+        "text":  "Communication was great and shipping was quick!",
+        "approved":  true,
+        "rating":  5,
+        "tags":  [
+                     "communication",
+                     "friendly",
+                     "item description",
+                     "quick shipper"
+                 ]
+    },
+    {
+        "id":  "rev_3",
+        "name":  "Ace",
+        "text":  "Great seller. Friendly and fast shipping.",
+        "approved":  true,
+        "rating":  5,
+        "tags":  [
+                     "communication",
+                     "friendly",
+                     "great packaging",
+                     "item description",
+                     "quick shipper"
+                 ]
+    },
+    {
+        "id":  "rev_4",
+        "name":  "Moneyy M.",
+        "text":  "Friendly, great packaging, quick shipper.",
+        "approved":  true,
+        "rating":  5,
+        "tags":  [
+                     "communication",
+                     "friendly",
+                     "great packaging",
+                     "item description",
+                     "quick shipper"
+                 ]
+    }
+]

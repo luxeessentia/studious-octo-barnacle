@@ -1,0 +1,4 @@
+﻿import Layout from '../../components/Layout';
+export default function Track(){
+  return (<Layout><h1>Track Your Order</h1><form onSubmit={(e)=>{ e.preventDefault(); const id=e.target.order.value; const email=e.target.email.value; const store=JSON.parse(localStorage.getItem('orders')||'[]'); const ord=store.find(o=>o.id===id && o.email===email); alert(ord ? 'Status: '+ord.status : 'Order not found'); }}><input name='order' placeholder='Order number' required style={{width:'100%',padding:8,marginBottom:8}}/><input name='email' type='email' placeholder='Email' required style={{width:'100%',padding:8,marginBottom:8}}/><button className='btn' type='submit'>Track</button></form></Layout>);
+}
