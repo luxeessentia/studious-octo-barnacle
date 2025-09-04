@@ -5,13 +5,15 @@ import fs from 'fs';
 import path from 'path';
 
 export default async function handler(req, res) {
-  if (req.method !== 'POST') 
+  if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
+  }
 
   try {
     const { items, email } = req.body || {};
-    if (!items || !Array.isArray(items)) 
+    if (!items || !Array.isArray(items)) {
       return res.status(400).json({ error: 'Invalid items' });
+    }
 
     const productsFile = path.join(process.cwd(), 'public', 'data', 'products.json');
     const products = JSON.parse(fs.readFileSync(productsFile, 'utf8'));
@@ -20,7 +22,9 @@ export default async function handler(req, res) {
     // Server-side stock check
     for (const it of items) {
       const p = map[it.id];
-      if (!p) return res.status(400).json({ error: 'Invalid product: ' + it.id });
+      if (!p) {
+        return res.status(400).json({ error: 'Invalid product: ' + it.id });
+      }
       if (typeof p.stock === 'number' && p.stock < (it.quantity || 1)) {
         return res.status(400).json({ error: `Insufficient stock for ${it.id}` });
       }
@@ -67,6 +71,7 @@ export default async function handler(req, res) {
     }
 
     return res.status(200).json({ url: session.url, id: session.id });
+
   } catch (err) {
     console.error(err);
     return res.status(500).json({ error: err.message || 'server error' });
